@@ -1,6 +1,47 @@
 # SimpleDX11renderer
 A simplified DirectX 11 implementation for C# based on SharpDX by Alexandre Mutel
 
+Rendered image from game engine based on this project
+https://cdn.discordapp.com/attachments/359329194288742401/727635544653430824/unknown.png
+
+Usage:
+  Format:
+    Description - example way to do "it"
+  
+  Recomended excecution order:
+    Create a renderer instance - Renderer renderer = new Renderer()
+    Set rendering api - renderer.SetRenderingAPI()
+    Set camera values - renderer.SetCameraProperties()
+    Start Renderer - renderer.StartRenderer(window handle, a winform controll)
+    Add textures - renderer.AddTexture();
+    Add light sources - renderer.SetLights()
+    
+    Render loop - sharpdx.Renderloop.Run()
+      Start a new frame - renderer.StartFrame()
+      Draw primitives/object
+        Draw a mesh - renderer.DrawMesh()
+        Draw a mesh without depth controll - renderer.DrawMeshDepthless()
+
+        Draw a cube - renderer.DrawCube()
+        Draw a cube without depth controll - renderer.DrawCubeDepthless()
+        
+        Draw a sphere - renderer.DrawSphere()
+        Draw a sphere without depth controll - renderer.DrawSphereDepthless()
+        
+        Draw a plane - renderer.DrawPlane()
+        Draw a plane without depth controll - renderer.DrawPlaneDepthless()
+        
+        Draw a triangle - renderer.DrawTriangle()
+        Draw a triangle without depth controll - renderer.DrawTriangleDepthless()
+        
+        Draw a quad - renderer.DrawQuad()
+        Draw a quad without depth controll - renderer.DrawQuadDepthless()
+        
+        Draw a icon - renderer.DrawIcon() - not implemented yet
+        Draw a icon without depth controll - renderer.DrawIconDepthless() - not implemented yet 
+      End the frame (render it to the screen) - renderer.EndFrame()        
+  Place your code within a render loop (I tested it with the Renderloop from sharpdx)
+
 SharpDX license:
 Copyright (c) 2010-2015 SharpDX - Alexandre Mutel
 
